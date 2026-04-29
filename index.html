@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <title>Burak Akbilek</title>
@@ -7,167 +7,174 @@
 <style>
 body {
     margin:0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family:Arial;
     color:white;
-    background: url("photo.jpg") no-repeat center center fixed;
-    background-size: cover;
+    background:#0f172a;
 }
 
-.overlay {
-    background: rgba(0,0,0,0.7);
-    min-height:100vh;
-    padding:40px;
-}
-
-.header {
-    text-align:center;
-    margin-bottom:40px;
-}
-
-.header img {
-    width:120px;
+/* profil */
+.profile {
+    position:fixed;
+    top:20px;
+    right:20px;
+    width:90px;
     border-radius:50%;
-    border:3px solid white;
 }
 
-h1 {
-    margin:10px 0 5px;
+/* header */
+header {
+    text-align:center;
+    padding:60px;
 }
 
-.subtitle {
-    color:#aaa;
+/* menu */
+.menu {
+    text-align:center;
 }
 
-.section {
-    max-width:800px;
-    margin:auto;
-}
-
-.card {
-    background:#1e1e1e;
-    padding:20px;
-    margin-bottom:20px;
-    border-radius:12px;
-}
-
-button {
+.menu button {
+    margin:10px;
+    padding:12px 20px;
     background:#3b82f6;
-    border:none;
-    padding:8px 12px;
     color:white;
-    border-radius:6px;
+    border:none;
+    border-radius:8px;
     cursor:pointer;
-    margin-top:10px;
 }
 
-button:hover {
+.menu button:hover {
     background:#2563eb;
 }
 
-.code-box {
+/* section */
+.section {
     display:none;
-    background:black;
-    padding:15px;
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+/* card */
+.card {
+    background:#1e293b;
+    padding:20px;
+    margin:20px 0;
+    border-radius:10px;
+}
+
+/* button */
+.btn {
+    display:inline-block;
     margin-top:10px;
-    overflow:auto;
-    max-height:300px;
-}
-
-.accordion {
-    cursor:pointer;
-    padding:15px;
-    background:#1e1e1e;
-    border-radius:10px;
-    margin-top:20px;
-}
-
-.panel {
-    display:none;
-    padding:10px;
-    background:#2a2a2a;
-    border-radius:10px;
+    padding:8px 12px;
+    background:#3b82f6;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
 }
 </style>
+
+<script>
+function showSection(id) {
+    var sections = document.getElementsByClassName("section");
+    for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = "none";
+    }
+    document.getElementById(id).style.display = "block";
+}
+</script>
+
 </head>
 
 <body>
 
-<div class="overlay">
+<img src="profil.jpg" class="profile">
 
-<div class="header">
-    <img src="photo.jpg">
-    <h1>Burak Akbilek</h1>
-    <div class="subtitle">Computer Engineer Candidate</div>
+<header>
+<h1>Burak Akbilek</h1>
+<p>Computer Engineer Candidate</p>
+</header>
+
+<div class="menu">
+<button onclick="showSection('about')">About Me</button>
+<button onclick="showSection('projects')">Projects</button>
+<button onclick="showSection('certificates')">Certificates</button>
 </div>
 
-<div class="section">
+<!-- ABOUT -->
+<div id="about" class="section">
+<h2>About Me</h2>
 
-<!-- PROJECT -->
+<p>I am a high school student aiming to become a computer engineer.</p>
+
+<h3>Education</h3>
+<p>Işık Schools - Middle School</p>
+<p>Florya Tevfik Ercan Anatolian High School</p>
+
+<h3>Goals</h3>
+<ul>
+<li>Study Computer Engineering</li>
+<li>Build strong software projects</li>
+</ul>
+</div>
+
+<!-- PROJECTS -->
+<div id="projects" class="section">
+
+<h2>Projects</h2>
+
 <div class="card">
-    <h3>Simple Calculator (Python)</h3>
-    <p>Advanced calculator with GUI, history & themes</p>
+<h3>Calculator App</h3>
+<p>Python calculator with UI.</p>
 
-    <button onclick="toggleCode()">View Code</button>
-    <a href="calculator.py" download>
-        <button>Download Code</button>
-    </a>
+<a href="https://github.com/burakakbilek07" class="btn" target="_blank">
+GitHub
+</a>
 
-    <div id="codeBox" class="code-box">
-<pre>
-PASTE KOD BURAYA
-</pre>
-    </div>
+<a href="https://raw.githubusercontent.com/burakakbilek07/burakakbilek.github.io/main/calculator_v2.exe" class="btn">
+Download EXE
+</a>
+</div>
+
+<div class="card">
+<h3>Weather App</h3>
+<p>Weather app using API.</p>
+</div>
+
+<div class="card">
+<h3>Task Manager</h3>
+<p>Daily task tracking app.</p>
+</div>
+
 </div>
 
 <!-- CERTIFICATES -->
-<div class="accordion" onclick="toggleCert()">
-    Certificates ▼
-</div>
+<div id="certificates" class="section">
 
-<div id="certPanel" class="panel">
+<h2>Certificates</h2>
+
 <ul>
 <li>HpLife AI</li>
 <li>HpLife Economy</li>
 <li>HpLife AI Professional</li>
-<li>Harvard Online</li>
-<li>Mun</li>
-<li>Google Skill AI Ads</li>
-<li>IelMun</li>
-<li>KabataşMun</li>
+
+<li>
+Google AI Ads Certification
+<br>
+<a href="#" class="btn">View</a>
+</li>
+
+<li>
+Harvard MUN
+<br>
+<a href="#" class="btn">View</a>
+</li>
+
 <li>Saylor Computer Science 1</li>
 <li>Saylor Computer Science 2</li>
 </ul>
-</div>
-
-<!-- CONTACT -->
-<div class="card">
-<h3>Contact</h3>
-<p>Email: burakakbilek07@gmail.com</p>
-<p>GitHub: <a href="https://github.com/burakakbilek07" target="_blank" style="color:#3b82f6;">github.com/burakakbilek07</a></p>
-</div>
 
 </div>
-</div>
-
-<script>
-function toggleCode() {
-    var x = document.getElementById("codeBox");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
-}
-
-function toggleCert() {
-    var x = document.getElementById("certPanel");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
-}
-</script>
 
 </body>
 </html>
