@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Burak Akbilek</title>
+
+<style>
+body {
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    color:white;
+    background: url("photo.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.7);
+    min-height:100vh;
+    padding:40px;
+}
+
+.header {
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.header img {
+    width:120px;
+    border-radius:50%;
+    border:3px solid white;
+}
+
+h1 {
+    margin:10px 0 5px;
+}
+
+.subtitle {
+    color:#aaa;
+}
+
+.section {
+    max-width:800px;
+    margin:auto;
+}
+
+.card {
+    background:#1e1e1e;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:12px;
+}
+
+button {
+    background:#3b82f6;
+    border:none;
+    padding:8px 12px;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+button:hover {
+    background:#2563eb;
+}
+
+.code-box {
+    display:none;
+    background:black;
+    padding:15px;
+    margin-top:10px;
+    overflow:auto;
+    max-height:300px;
+}
+
+.accordion {
+    cursor:pointer;
+    padding:15px;
+    background:#1e1e1e;
+    border-radius:10px;
+    margin-top:20px;
+}
+
+.panel {
+    display:none;
+    padding:10px;
+    background:#2a2a2a;
+    border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+<div class="header">
+    <img src="photo.jpg">
+    <h1>Burak Akbilek</h1>
+    <div class="subtitle">Computer Engineer Candidate</div>
+</div>
+
+<div class="section">
+
+<!-- PROJECT -->
+<div class="card">
+    <h3>Simple Calculator (Python)</h3>
+    <p>Advanced calculator with GUI, history & themes</p>
+
+    <button onclick="toggleCode()">View Code</button>
+    <a href="calculator.py" download>
+        <button>Download Code</button>
+    </a>
+
+    <div id="codeBox" class="code-box">
+<pre>
+PASTE KOD BURAYA
+</pre>
+    </div>
+</div>
+
+<!-- CERTIFICATES -->
+<div class="accordion" onclick="toggleCert()">
+    Certificates ▼
+</div>
+
+<div id="certPanel" class="panel">
+<ul>
+<li>HpLife AI</li>
+<li>HpLife Economy</li>
+<li>HpLife AI Professional</li>
+<li>Harvard Online</li>
+<li>Mun</li>
+<li>Google Skill AI Ads</li>
+<li>IelMun</li>
+<li>KabataşMun</li>
+<li>Saylor Computer Science 1</li>
+<li>Saylor Computer Science 2</li>
+</ul>
+</div>
+
+<!-- CONTACT -->
+<div class="card">
+<h3>Contact</h3>
+<p>Email: burakakbilek07@gmail.com</p>
+<p>GitHub: <a href="https://github.com/burakakbilek07" target="_blank" style="color:#3b82f6;">github.com/burakakbilek07</a></p>
+</div>
+
+</div>
+</div>
+
+<script>
+function toggleCode() {
+    var x = document.getElementById("codeBox");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
+function toggleCert() {
+    var x = document.getElementById("certPanel");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
