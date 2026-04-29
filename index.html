@@ -8,69 +8,67 @@
 body {
     margin:0;
     font-family:Arial;
-    color:white;
     background:#0f172a;
-}
-
-/* profil */
-.profile {
-    position:fixed;
-    top:20px;
-    right:20px;
-    width:90px;
-    border-radius:50%;
-}
-
-/* header */
-header {
-    text-align:center;
-    padding:60px;
-}
-
-/* menu */
-.menu {
-    text-align:center;
-}
-
-.menu button {
-    margin:10px;
-    padding:12px 20px;
-    background:#3b82f6;
     color:white;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
 }
 
-.menu button:hover {
-    background:#2563eb;
+/* HEADER */
+.header {
+    text-align:center;
+    padding:60px 20px;
 }
 
-/* section */
-.section {
-    display:none;
-    max-width:900px;
-    margin:auto;
-    padding:20px;
+.header h1 {
+    font-size:50px;
+    margin:0;
 }
 
-/* card */
-.card {
-    background:#1e293b;
-    padding:20px;
-    margin:20px 0;
+.header p {
+    color:#aaa;
+}
+
+/* PROFILE */
+.profile {
+    position:absolute;
+    top:40px;
+    right:60px;
+    width:180px;
     border-radius:10px;
 }
 
-/* button */
-.btn {
-    display:inline-block;
-    margin-top:10px;
-    padding:8px 12px;
-    background:#3b82f6;
-    color:white;
-    text-decoration:none;
+/* MENU */
+.menu {
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-top:40px;
+}
+
+.menu button {
+    background:#c7d2fe;
+    color:#111;
+    border:none;
+    padding:20px 40px;
+    font-size:20px;
     border-radius:6px;
+    cursor:pointer;
+}
+
+/* SECTIONS */
+.section {
+    display:none;
+    max-width:900px;
+    margin:60px auto;
+    padding:20px;
+}
+
+h2 {
+    font-size:35px;
+}
+
+/* LINKS */
+a {
+    color:#60a5fa;
 }
 </style>
 
@@ -86,92 +84,73 @@ function showSection(id) {
 
 </head>
 
-<body>
+<body onload="showSection('home')">
 
 <img src="profil.jpg" class="profile">
 
-<header>
+<div class="header">
 <h1>Burak Akbilek</h1>
-<p>Computer Engineer Candidate</p>
-</header>
+<p>Computer Engineering Candidate</p>
+</div>
 
 <div class="menu">
-<button onclick="showSection('about')">About Me</button>
+<button onclick="showSection('about')">About me</button>
 <button onclick="showSection('projects')">Projects</button>
 <button onclick="showSection('certificates')">Certificates</button>
 </div>
 
 <!-- ABOUT -->
 <div id="about" class="section">
-<h2>About Me</h2>
+<h2>About Me:</h2>
 
-<p>I am a high school student aiming to become a computer engineer.</p>
+<p>I'm a high school student and I'm working hard to get into a good university to study computer science and build my future.</p>
 
-<h3>Education</h3>
-<p>Işık Schools - Middle School</p>
+<h3>Education:</h3>
+<p>Işık Schools: Middle School Educational</p>
 <p>Florya Tevfik Ercan Anatolian High School</p>
+<p>SOBIL: IB Program And Diploma</p>
 
-<h3>Goals</h3>
+<h3>Goals:</h3>
 <ul>
-<li>Study Computer Engineering</li>
-<li>Build strong software projects</li>
+<li>Study computer engineering</li>
+<li>Develop career in technology</li>
 </ul>
+
+<h3>My Journey:</h3>
+<p>I graduated from Işık Middle School and developed interest in coding...</p>
 </div>
 
 <!-- PROJECTS -->
 <div id="projects" class="section">
+<h2>Projects:</h2>
 
-<h2>Projects</h2>
+<h3>Calculator (Python)</h3>
+<p>A Python-based calculator.</p>
 
-<div class="card">
-<h3>Calculator App</h3>
-<p>Python calculator with UI.</p>
+<a href="https://github.com/burakakbilek07" target="_blank">GitHub Link</a>
+<br><br>
 
-<a href="https://github.com/burakakbilek07" class="btn" target="_blank">
-GitHub
-</a>
-
-<a href="https://raw.githubusercontent.com/burakakbilek07/burakakbilek.github.io/main/calculator_v2.exe" class="btn">
-Download EXE
-</a>
-</div>
-
-<div class="card">
-<h3>Weather App</h3>
-<p>Weather app using API.</p>
-</div>
-
-<div class="card">
-<h3>Task Manager</h3>
-<p>Daily task tracking app.</p>
-</div>
-
+<a href="calculator_v2.exe" download>Download EXE</a>
 </div>
 
 <!-- CERTIFICATES -->
 <div id="certificates" class="section">
-
-<h2>Certificates</h2>
+<h2>Certificates And achievements:</h2>
 
 <ul>
-<li>HpLife AI</li>
-<li>HpLife Economy</li>
-<li>HpLife AI Professional</li>
-
-<li>
-Google AI Ads Certification
-<br>
-<a href="#" class="btn">View</a>
-</li>
-
-<li>
-Harvard MUN
-<br>
-<a href="#" class="btn">View</a>
-</li>
+<li>Harvard Online MUN <br>
+<a href="https://certopus.com" target="_blank">link</a></li>
 
 <li>Saylor Computer Science 1</li>
-<li>Saylor Computer Science 2</li>
+<li>Saylor Python For Data Science</li>
+
+<li>HpLife Circular Economy <br>
+<a href="https://life-global.org" target="_blank">link</a></li>
+
+<li>HpLife AI Professional <br>
+<a href="https://life-global.org" target="_blank">link</a></li>
+
+<li>Kabataş MUN</li>
 </ul>
 
 </div>
