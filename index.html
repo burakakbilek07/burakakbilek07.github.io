@@ -70,6 +70,20 @@ h2 {
 a {
     color:#60a5fa;
 }
+
+/* giriş animasyonu */
+body {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 </style>
 
 <script>
