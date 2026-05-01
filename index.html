@@ -176,5 +176,25 @@ My goal is to develop a solid technical foundation and pursue international acad
 
 </div>
 
+    <script>
+let activeSection = null;
+
+function showSection(id) {
+    const section = document.getElementById(id);
+
+    if (activeSection === section) {
+        section.style.display = "none";
+        activeSection = null;
+        return;
+    }
+
+    const sections = document.querySelectorAll(".section");
+    sections.forEach(sec => sec.style.display = "none");
+
+    section.style.display = "block";
+    activeSection = section;
+}
+</script>
+
 </body>
 </html>
