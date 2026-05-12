@@ -15,22 +15,25 @@ body {
 }
 
 .header h1 {
-    font-size:50px;
+    font-size:70px;
     margin:0;
 }
 
 .header p {
     color:#aaa;
+    font-size:22px;
 }
 
+/* FOTOĞRAF */
 .profile {
     position:absolute;
-    top:40px;
-    right:60px;
-    width:180px;
-    border-radius:10px;
+    top:25px;
+    right:320px;
+    width:220px;
+    border-radius:15px;
 }
 
+/* MENÜ */
 .menu {
     display:flex;
     justify-content:center;
@@ -39,13 +42,19 @@ body {
 }
 
 .menu button {
+    width:220px;
     background:#c7d2fe;
     color:#111;
     border:none;
     padding:20px 40px;
     font-size:20px;
-    border-radius:6px;
+    border-radius:10px;
     cursor:pointer;
+    transition:0.3s;
+}
+
+.menu button:hover{
+    transform:scale(1.05);
 }
 
 .section {
