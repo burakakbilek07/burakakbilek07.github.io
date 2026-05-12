@@ -4,95 +4,11 @@
 <meta charset="UTF-8">
 <title>Burak Akbilek</title>
 
-<style>
-body {
-    margin:0;
-    font-family:Arial;
-    background:#0f172a;
-    color:white;
-}
-
-.header {
-    text-align:center;
-    padding:60px 20px;
-}
-
-.header h1 {
-    font-size:50px;
-    margin:0;
-}
-
-.header p {
-    color:#aaa;
-}
-
-.profile {
-    position:absolute;
-    top:40px;
-    right:60px;
-    width:180px;
-    border-radius:10px;
-}
-
-.menu {
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    margin-top:40px;
-}
-
-.menu button {
-    background:#c7d2fe;
-    color:#111;
-    border:none;
-    padding:20px 40px;
-    font-size:20px;
-    border-radius:6px;
-    cursor:pointer;
-}
-
-.section {
-    display:none;
-    max-width:900px;
-    margin:60px auto;
-    padding:20px;
-}
-
-h2 {
-    font-size:35px;
-}
-
-a {
-    color:#60a5fa;
-}
-
-body {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeIn 1s ease forwards;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-</style>
-
-<script>
-function showSection(id) {
-    var sections = document.getElementsByClassName("section");
-    for (var i = 0; i < sections.length; i++) {
-        sections[i].style.display = "none";
-    }
-    document.getElementById(id).style.display = "block";
-}
-</script>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
-<body onload="showSection('home')">
+<body>
 
 <img src="yavsak.jpeg" class="profile">
 
@@ -111,7 +27,7 @@ function showSection(id) {
 <h2>About Me:</h2>
 
 <p>Hello, my name is Burak Akbilek. I am a student of high school and a very keen programmer. I engage myself in projects that improve my skills and help me gain knowledge from my experience.
-I have been experimenting with many aspects of programming while developing my expertise with every new project. 
+I have been experimenting with many aspects of programming while developing my expertise with every new project.
 My goal is to develop a solid technical foundation and pursue international academic opportunities in the field of technology.</p>
 
 <h3>Education:</h3>
@@ -127,8 +43,8 @@ My goal is to develop a solid technical foundation and pursue international acad
 
 <h3>My Journey:</h3>
 <p>I developed an interest in coding and programming in 9. grade. There were even days when I coded for 12 hours straight. In 10th grade, to improve my English and my academic performance,
-    I started the IB program, passing the entrance exam to earn my IB diploma. After completing various projects during this period,
-    I had to return to my old high school and continued to participate in various activities and exams.</p>
+I started the IB program, passing the entrance exam to earn my IB diploma. After completing various projects during this period,
+I had to return to my old high school and continued to participate in various activities and exams.</p>
 </div>
 
 <div id="projects" class="section">
@@ -154,7 +70,7 @@ My goal is to develop a solid technical foundation and pursue international acad
 <li>Saylor Python For Data Science</li>
 
 <li>HpLife Circular Economy <br>
-<a href="https://www.life-global.org/certificate/4e289d39-b8e5-4d86-9dad-a2aedc0f6006"_blank">link</a></li>
+<a href="https://www.life-global.org/certificate/4e289d39-b8e5-4d86-9dad-a2aedc0f6006" target="_blank">link</a></li>
 
 <li>HpLife AI Professional <br>
 <a href="https://www.life-global.org/certificate/ed9b7af7-e226-410f-b61b-494144aa4cc1" target="_blank">link</a></li>
@@ -167,25 +83,7 @@ My goal is to develop a solid technical foundation and pursue international acad
 
 </div>
 
-    <script>
-let activeSection = null;
-
-function showSection(id) {
-    const section = document.getElementById(id);
-
-    if (activeSection === section) {
-        section.style.display = "none";
-        activeSection = null;
-        return;
-    }
-
-    const sections = document.querySelectorAll(".section");
-    sections.forEach(sec => sec.style.display = "none");
-
-    section.style.display = "block";
-    activeSection = section;
-}
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
