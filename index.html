@@ -1,55 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Burak Akbilek</title>
 
-<link rel="stylesheet" href="style.css">
-
 <style>
+body {
+    background-color: #0a1120;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 50px;
+    object-fit: cover;
+    border: 3px solid #c2d1f0;
+}
+
 .header {
     text-align: center;
     margin-top: 20px;
 }
 
 .header h1 {
-    font-size: 3rem;
-    margin-bottom: 5px;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #a0aabf;
+    margin-top: 10px;
 }
 
 .menu {
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    gap: 15px;
 }
 
 .menu button {
-    padding: 10px 20px;
-    margin: 0 5px;
-    cursor: pointer;
+    background-color: #c2d1f0;
+    color: #0a1120;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
     font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu button:hover {
+    background-color: #ffffff;
+    transform: translateY(-3px);
 }
 
 .section {
+    width: 80%;
     max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    scroll-margin-top: 20px;
+    padding: 80px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    scroll-margin-top: 50px;
 }
 
-.profile {
-    display: block;
-    margin: 20px auto;
-    max-width: 150px;
-    border-radius: 50%;
+.section h2 {
+    font-size: 2.5rem;
+    color: #c2d1f0;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.section p, .section li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: left;
+}
+
+a {
+    color: #c2d1f0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: square;
+    padding-left: 20px;
 }
 </style>
-
 </head>
 
 <body>
 
-<img src="yavsak.jpeg" class="profile" alt="Burak Akbilek">
+<img src="yavsak.jpeg" class="profile" alt="Profile">
 
 <div class="header">
     <h1>Burak Akbilek</h1>
@@ -57,91 +113,31 @@
 </div>
 
 <div class="menu">
-    <button onclick="scrollToSection('about')">About me</button>
+    <button onclick="scrollToSection('about')">About Me</button>
     <button onclick="scrollToSection('projects')">Projects</button>
     <button onclick="scrollToSection('certificates')">Certificates</button>
 </div>
 
 <div id="about" class="section">
-    <h2>About Me:</h2>
-    <p>Hello, my name is Burak Akbilek. I am a student of high school and a very keen programmer. I engage myself in projects that improve my skills and help me gain knowledge from my experience.
-    I have been experimenting with many aspects of programming while developing my expertise with every new project.
-    My goal is to develop a solid technical foundation and pursue international academic opportunities in the field of technology.</p>
-
-    <h3>Education:</h3>
-    <p>Işık Schools: Middle School Educational</p>
-    <p>Florya Tevfik Ercan Anatolian High School</p>
-    <p>SOBIL: IB Program And Diploma</p>
-
-    <h3>Goals:</h3>
-    <ul>
-        <li>Study computer engineering</li>
-        <li>Develop career in technology</li>
-    </ul>
-
-    <h3>My Journey:</h3>
-    <p>I developed an interest in coding and programming in 9. grade. There were even days when I coded for 12 hours straight. In 10th grade, to improve my English and my academic performance,
-    I started the IB program, passing the entrance exam to earn my IB diploma. After completing various projects during this period,
-    I had to return to my old high school and continued to participate in various activities and exams.</p>
+    <h2>About Me</h2>
+    <p>Hello, my name is Burak Akbilek. I am a student of high school and a very keen programmer. I engage myself in projects that improve my skills and help me gain knowledge from my experience.</p>
+    
+    <h3>Education</h3>
+    <p>Işık Schools: Middle School Educational<br>
+    Florya Tevfik Ercan Anatolian High School<br>
+    SOBIL: IB Program And Diploma</p>
 </div>
-
-<hr style="max-width: 800px; margin: auto; opacity: 0.3;">
 
 <div id="projects" class="section">
-    <h2>Projects:</h2>
-
+    <h2>Projects</h2>
     <h3>Calculator (Python)</h3>
-    <p>A Python-based calculator.</p>
-
+    <p>A Python-based calculator developed for mathematical operations.</p>
     <a href="https://github.com/burakakbilek07" target="_blank">GitHub Link</a>
-    <br><br>
-    <a href="calculator_v2.exe" download>Download EXE</a>
 </div>
-
-<hr style="max-width: 800px; margin: auto; opacity: 0.3;">
 
 <div id="certificates" class="section">
-    <h2>Certificates And achievements:</h2>
-
+    <h2>Certificates</h2>
     <ul>
-        <li>Harvard Online MUN <br>
-            <a href="https://certopus.com/c/bd4d8f13f11c45ec848aacfbdb0dbe68" target="_blank">link</a>
-        </li>
-
-        <li>Saylor İntroduction to programming 1 <br>
-            <a href="https://learn.saylor.org/pluginfile.php/1/tool_certificate/issues/1777485511/3343682432BA.pdf" target="_blank">link</a>
-        </li>
-          
-        <li>Saylor Python For Data Science <br>
-            <a href="https://learn.saylor.org/pluginfile.php/1/tool_certificate/issues/1778968356/5007976959BA.pdf" target="_blank">link</a>
-        </li>
-
-        <li>HpLife Circular Economy <br>
-            <a href="https://www.life-global.org/certificate/4e289d39-b8e5-4d86-9dad-a2aedc0f6006" target="_blank">link</a>
-        </li>
-
-        <li>HpLife AI Professional <br>
-            <a href="https://www.life-global.org/certificate/ed9b7af7-e226-410f-b61b-494144aa4cc1" target="_blank">link</a>
-        </li>
-
-        <li>HpLife Critical Thinking in the Ai area <br>
-            <a href="https://www.life-global.org/certificate/305e8f31-eadf-4ea2-8ab6-b1a424608581" target="_blank">link</a>
-        </li>
-
-        <li>Kabataş MUN</li>
-    </ul>
-</div>
-
-<script>
-function scrollToSection(sectionId) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-    }
-}
-</script>
-
-<script src="script.js"></script> 
-
-</body>
-</html>
+        <li>Harvard Online MUN - <a href="https://certopus.com/c/bd4d8f13f11c45ec848aacfbdb0dbe68" target="_blank">Link</a></li>
+        <li>Saylor Python For Data Science - <a href="https://learn.saylor.org/pluginfile.php/1/tool_certificate/issues/1778968356/5007976959BA.pdf" target="_blank">Link</a></li>
+        <li>HpLife AI Professional - <a href="
