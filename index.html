@@ -8,17 +8,25 @@
 </head>
 <body>
 
-<img src="yavsak.jpeg" class="profile" alt="Profile">
+<div class="hero-container">
+    <div class="header-content">
+        <h1>Burak Akbilek</h1>
+        <p class="subtitle">Computer Engineering Candidate</p>
+        
+        <div class="contact-box">
+            <h3>Contact With Me:</h3>
+            <p>burakakbilek07@gmail.com</p>
+            <p>Github: <a href="https://github.com/burakakbilek07" target="_blank">burakakbilek07</a></p>
+        </div>
 
-<div class="header">
-    <h1>Burak Akbilek</h1>
-    <p>Computer Engineering Candidate</p>
-</div>
+        <div class="menu">
+            <button onclick="scrollToSection('about')">About Me</button>
+            <button onclick="scrollToSection('projects')">Projects</button>
+            <button onclick="scrollToSection('certificates')">Certificates</button>
+        </div>
+    </div>
 
-<div class="menu">
-    <button onclick="scrollToSection('about')">About Me</button>
-    <button onclick="scrollToSection('projects')">Projects</button>
-    <button onclick="scrollToSection('certificates')">Certificates</button>
+    <img src="yavsak.jpeg" class="profile" alt="Profile">
 </div>
 
 <div id="about" class="section">
