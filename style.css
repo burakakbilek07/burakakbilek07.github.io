@@ -91,21 +91,20 @@ a:hover {
 ul {
     list-style: square;
     padding-left: 20px;
-}
 .contact {
   padding: 100px 40px;
   max-width: 600px;
-  margin-left: 300px;
-  text-align: right;
+  margin: 0;
+  text-align: left;
 }
-X
+
 .contact h2 {
   font-size: 48px;
   margin-bottom: 20px;
 }
 
 .contact p {
-  font-size: 45px;
+  font-size: 20px;
   margin: 10px 0;
 }
 
