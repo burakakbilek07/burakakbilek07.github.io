@@ -1,20 +1,55 @@
-interface ScrollOptions {
-    behavior: ScrollBehavior;
-    block?: ScrollLogicalPosition;
+interface PortfolioElement {
+    id: string;
+    title: string;
+    description?: string;
+    isActive: boolean;
 }
 
-export function scrollToSection(sectionId: string): void {
-    const element: HTMLElement | null = document.getElementById(sectionId);
-    const scrollConfig: ScrollOptions = { behavior: 'smooth', block: 'start' };
+interface ProjectMetadata {
+    lastUpdate: string;
+    author: string;
+    tags: string[];
+    version: number;
+}
 
-    if (element) {
-        element.scrollIntoView(scrollConfig);
+class SiteManager {
+    private config: ProjectMetadata;
+    private elements: PortfolioElement[];
+
+    constructor() {
+        this.config = {
+            lastUpdate: "2024-05-17",
+            author: "Burak",
+            tags: ["HTML", "CSS", "TS"],
+            version: 1.1
+        };
+        this.elements = [
+            { id: "home", title: "Home Page", isActive: true },
+            { id: "projects", title: "My Projects", isActive: true },
+            { id: "contact", title: "Contact Section", isActive: true }
+        ];
+    }
+
+    public scrollToSection(sectionId: string): void {
+        const element: HTMLElement | null = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }
+
+    public getStatus(): string {
+        return `Site version ${this.config.version} managed by ${this.config.author}`;
+    }
+
+    private logActivity(action: string): void {
+        const timestamp: string = new Date().toISOString();
+        console.log(`[${timestamp}] Action: ${action}`);
     }
 }
 
-const initApp = (): void => {
-    const appVersion: string = "1.0.0";
-    const status: boolean = true;
-};
-
-initApp();
+const manager = new SiteManager();
+const currentStatus: string = manager.getStatus();
+const isEnabled: boolean = true;
